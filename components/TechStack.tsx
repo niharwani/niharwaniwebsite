@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform, MotionValue } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import {
@@ -32,11 +32,11 @@ const techIcons = [
   { name: 'Power BI', color: '#F2C811', Icon: FaChartBar },
 ];
 
-function DockIcon({ tech, mouseX }: { tech: typeof techIcons[0]; mouseX: any }) {
+function DockIcon({ tech, mouseX }: { tech: typeof techIcons[0]; mouseX: MotionValue<number> }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
-  const distance = useTransform(mouseX, (val) => {
+  const distance = useTransform(mouseX, (val: number) => {
     const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
     return val - bounds.x - bounds.width / 2;
   });
