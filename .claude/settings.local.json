@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/wanin/Downloads/**)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(dir \"C:\\Users\\wanin\\Downloads\")",
+      "Bash(findstr:*)",
+      "Bash(if not exist \"C:\\Coding Files\\Projects\\Portfolio\\public\" mkdir \"C:\\Coding Files\\Projects\\Portfolio\\public\")",
+      "Bash(taskkill:*)",
+      "Bash(if exist .next rmdir /s /q .next)",
+      "Bash(node -e:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(dir \"C:\\Coding Files\\Projects\\Portfolio\\public\\project\" /b)",
+      "Bash(dir \"C:\\Coding Files\\Projects\\Portfolio\\public\")",
+      "Bash(dir \"C:\\Coding Files\\Projects\\Portfolio\\public\\projects\")",
+      "Bash(pkill:*)",
+      "Bash(dir \"C:\\Coding Files\\Projects\\Portfolio\\public\" /b)",
+      "WebFetch(domain:www.linkedin.com)",
+      "Bash(dir:*)",
+      "Bash(cmd /c dir)",
+      "Bash(rm:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
