@@ -22,7 +22,11 @@
       "WebFetch(domain:www.linkedin.com)",
       "Bash(dir:*)",
       "Bash(cmd /c dir)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

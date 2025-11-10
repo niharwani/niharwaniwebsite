@@ -4,11 +4,19 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Award, ExternalLink } from 'lucide-react';
-import { SiDocker, SiLinkedin, SiCoursera, SiPython } from 'react-icons/si';
+import { SiDocker, SiLinkedin, SiCoursera, SiPython, SiGoogle } from 'react-icons/si';
 import { FaAws, FaMicrosoft } from 'react-icons/fa';
 import { BarChart3, TrendingUp, Lightbulb, Palette, Database, Code, Terminal } from 'lucide-react';
 
 const certifications = [
+  {
+    title: 'Google Analytics Certification',
+    issuer: 'Google Digital Academy (Skillshop)',
+    date: 'Nov 2025',
+    Icon: SiGoogle,
+    color: 'from-blue-500 to-green-500',
+    credentialUrl: 'https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fskillshop.credential.net%2Fe5533eb4-ac02-4cc9-9efc-8b2598c102d9&urlhash=Z2Qz&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bsy2evGEzQvOZRzOw3Z4t%2FQ%3D%3D',
+  },
   {
     title: 'AWS Knowledge: Cloud Essentials',
     issuer: 'Amazon Web Services (AWS)',
