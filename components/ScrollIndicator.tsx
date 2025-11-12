@@ -1,23 +1,24 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 export default function ScrollIndicator() {
   const [isVisible, setIsVisible] = useState(true);
-  const { scrollY } = useScroll();
 
   useEffect(() => {
     const updateVisibility = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+      // Check if Contact section is in view
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-      // Hide if scrolled more than one viewport height or near bottom
-      const shouldShow = scrollPosition < windowHeight &&
-                        (documentHeight - scrollPosition - windowHeight) > 100;
-      setIsVisible(shouldShow);
+        // Hide arrow when Contact section is visible in viewport
+        // Show when Contact section is below the viewport (not yet reached)
+        const contactInView = rect.top < windowHeight && rect.bottom > 0;
+        setIsVisible(!contactInView);
+      }
     };
 
     updateVisibility();
@@ -41,20 +42,29 @@ export default function ScrollIndicator() {
         y: isVisible ? 0 : -20,
       }}
       transition={{ duration: 0.3 }}
-      className="hidden md:flex fixed bottom-8 right-8 z-50 items-center justify-center w-12 h-12 bg-gray-900/80 backdrop-blur-sm border border-gray-700 hover:border-gray-600 rounded-full cursor-pointer transition-all hover:scale-110 group"
+      className="hidden md:block fixed bottom-8 right-8 z-50 cursor-pointer group"
       style={{ pointerEvents: isVisible ? 'auto' : 'none' }}
       aria-label="Scroll down"
     >
-      <motion.div
-        animate={{ y: [0, 5, 0] }}
+      <motion.svg
+        width="24"
+        height="32"
+        viewBox="0 0 24 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        animate={{ y: [0, 8, 0] }}
         transition={{
           duration: 1.5,
           repeat: Infinity,
           ease: "easeInOut"
         }}
+        className="text-gray-400 group-hover:text-white transition-colors"
       >
-        <ChevronDown className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
-      </motion.div>
+        {/* Arrow shaft */}
+        <line x1="12" y1="0" x2="12" y2="24" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+        {/* Arrow head */}
+        <path d="M5 17L12 24L19 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </motion.svg>
     </motion.button>
   );
 }
