@@ -11,11 +11,13 @@ import Experience from '@/components/Experience';
 import Certifications from '@/components/Certifications';
 import Contact from '@/components/Contact';
 import Navigation from '@/components/Navigation';
+import ScrollIndicator from '@/components/ScrollIndicator';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
       <Navigation />
+      <ScrollIndicator />
       <Hero />
       <About />
       <TechStack />
