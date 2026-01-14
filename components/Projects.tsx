@@ -15,7 +15,7 @@ const projects = [
     link: 'https://netwatchbynihar.vercel.app/',
     github: 'https://github.com/niharwani/NetWatch',
     gradient: 'from-purple-500 to-indigo-500',
-    image: '/projects/NetWatch.png',
+    image: '/projects/netwatch.png',
   },
   {
     title: 'FinTrack - Portfolio Manager',
