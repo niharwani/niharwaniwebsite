@@ -28,7 +28,8 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(copy \"c:\\\\Coding Files\\\\website\\\\Nihar Wani Resume.pdf\" \"c:\\\\Coding Files\\\\website\\\\public\\\\resume.pdf\")",
-      "Bash(npx next build)"
+      "Bash(npx next build)",
+      "Bash(npm update:*)"
     ],
     "deny": [],
     "ask": []
