@@ -8,7 +8,7 @@ const skillCategories = [
   {
     title: 'Programming & Tools',
     skills: [
-      'Python', 'SQL', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript',
+      'C', 'C++', 'Python', 'SQL', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript',
       'Git', 'REST APIs', 'Firebase', 'Supabase', 'Next.js', 'React',
       'Tailwind CSS', 'Shadcn/UI'
     ],
@@ -26,16 +26,16 @@ const skillCategories = [
   {
     title: 'Cloud & Infrastructure',
     skills: [
-      'AWS', 'Azure', 'Google Cloud Platform', 'Firebase Auth',
+      'AWS', 'Azure', 'Google Cloud Platform', 'Linux/UNIX', 'Firebase Auth',
       'PostgreSQL', 'Realtime DB', 'CI/CD', 'Docker'
     ],
     color: 'from-green-500 to-emerald-500',
   },
   {
-    title: 'AdTech & Web',
+    title: 'Networking & Web',
     skills: [
-      'HTTP', 'Web Protocols', 'Google Ads', 'API Integration',
-      'Web Analytics', 'User Behavior Tracking'
+      'TCP/IP', 'HTTP/HTTPS', 'Web Protocols', 'Network Monitoring', 'Google Ads',
+      'API Integration', 'Web Analytics', 'User Behavior Tracking'
     ],
     color: 'from-orange-500 to-red-500',
   },

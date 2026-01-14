@@ -26,7 +26,9 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(copy \"c:\\\\Coding Files\\\\website\\\\Nihar Wani Resume.pdf\" \"c:\\\\Coding Files\\\\website\\\\public\\\\resume.pdf\")",
+      "Bash(npx next build)"
     ],
     "deny": [],
     "ask": []

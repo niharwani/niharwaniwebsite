@@ -41,7 +41,7 @@ const education = [
     school: 'Sacred Heart University',
     location: 'Fairfield, USA',
     period: 'Expected March 2026',
-    gpa: '3.89/4.0',
+    gpa: '3.92/4.0',
     logo: '/SHU Logo.png',
   },
   {

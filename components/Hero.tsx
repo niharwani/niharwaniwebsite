@@ -54,14 +54,14 @@ export default function Hero() {
 
     prevScrollY.current = currentScrollY;
 
-    // Base speed - responsive to screen size
+    // Base speed - responsive to screen size (slowed down by 50%)
     const getSpeed = () => {
-      if (typeof window === 'undefined') return 1.5;
+      if (typeof window === 'undefined') return 0.75;
       const vw = window.innerWidth;
-      if (vw < 640) return 0.5; // Much slower on mobile
-      if (vw < 768) return 0.8; // Slower on small tablets
-      if (vw < 1024) return 1.2; // Moderate on tablets
-      return 1.5; // Normal on desktop
+      if (vw < 640) return 0.25; // Much slower on mobile
+      if (vw < 768) return 0.4; // Slower on small tablets
+      if (vw < 1024) return 0.6; // Moderate on tablets
+      return 0.75; // Normal on desktop
     };
 
     const baseSpeed = getSpeed();

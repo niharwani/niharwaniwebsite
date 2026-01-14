@@ -8,6 +8,16 @@ import Image from 'next/image';
 
 const projects = [
   {
+    title: 'NetWatch - Real-Time Network Monitoring Dashboard',
+    category: 'Full-Stack Web App',
+    description: 'Built a real-time network monitoring dashboard using Next.js 14, TypeScript, and Tailwind CSS with live data visualization and serverless-compatible architecture. Implemented comprehensive network diagnostics including device ping monitoring, port scanning, TCP/HTTP connectivity tests, and DNS resolution with historical tracking. Designed an intelligent alert system with configurable thresholds for latency, packet loss, and device availability featuring real-time browser notifications. Deployed production-ready application on Vercel with client-side state management to overcome serverless limitations and ensure seamless real-time updates.',
+    tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    link: 'https://netwatchbynihar.vercel.app/',
+    github: 'https://github.com/niharwani/NetWatch',
+    gradient: 'from-purple-500 to-indigo-500',
+    image: '/projects/NetWatch.png',
+  },
+  {
     title: 'FinTrack - Portfolio Manager',
     category: 'Full-Stack Web App',
     description: 'A comprehensive personal finance web application built with Next.js, Supabase, and Firebase. Features real-time stock tracking, portfolio management, and custom stock screener with advanced filters. Integrated Finnhub API for live market data with secure authentication and responsive dashboards.',
@@ -86,7 +96,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className={`object-cover ${index === 2 ? 'object-top' : 'object-left'}`}
+                    className={`object-cover ${index === 2 ? 'object-left' : index === 3 ? 'object-top' : 'object-left'}`}
                   />
                 </div>
               </div>
@@ -120,6 +130,8 @@ export default function Projects() {
                   {project.link && (
                     <motion.a
                       href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
                       whileHover={{ x: 3 }}
                     >
@@ -130,6 +142,8 @@ export default function Projects() {
                   {project.github && (
                     <motion.a
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
                       whileHover={{ x: 3 }}
                     >

@@ -14,10 +14,14 @@ import {
   SiPostgresql,
   SiDocker,
   SiGit,
+  SiC,
+  SiCplusplus,
 } from 'react-icons/si';
 import { FaAws, FaChartBar } from 'react-icons/fa';
 
 const techIcons = [
+  { name: 'C', color: '#A8B9CC', Icon: SiC },
+  { name: 'C++', color: '#00599C', Icon: SiCplusplus },
   { name: 'Python', color: '#3776AB', Icon: SiPython },
   { name: 'React', color: '#61DAFB', Icon: SiReact },
   { name: 'Next.js', color: '#FFFFFF', Icon: SiNextdotjs },

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Download, X, Menu } from 'lucide-react';
 
 function NavItem({ item, index }: { item: { name: string; href: string }; index: number }) {
@@ -36,6 +37,11 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [showResume, setShowResume] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,6 +69,7 @@ export default function Navigation() {
   ];
 
   return (
+    <>
     <motion.nav
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -165,7 +172,10 @@ export default function Navigation() {
         )}
       </AnimatePresence>
 
-      {/* Resume Modal */}
+    </motion.nav>
+
+    {/* Resume Modal - rendered in portal to avoid positioning issues */}
+    {mounted && createPortal(
       <AnimatePresence>
         {showResume && (
           <motion.div
@@ -189,7 +199,7 @@ export default function Navigation() {
                 <div className="flex items-center gap-3">
                   <motion.a
                     href="/resume.pdf"
-                    download="Nihar_Wani_Resume.pdf"
+                    download="Nihar Wani Resume.pdf"
                     className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -219,7 +229,9 @@ export default function Navigation() {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
-    </motion.nav>
+      </AnimatePresence>,
+      document.body
+    )}
+    </>
   );
 }
