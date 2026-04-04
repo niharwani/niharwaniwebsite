@@ -113,7 +113,7 @@ export default function Hero() {
               <div className="w-4 md:w-32"></div>
               <div className="pl-2 md:pl-8 pr-2 md:pr-6 py-2 md:py-5">
                 <div className="text-xs md:text-lg font-light">Located in</div>
-                <div className="text-xs md:text-lg font-light">United States</div>
+                <div className="text-xs md:text-lg font-light">Mumbai, India</div>
               </div>
               <motion.div
                 className="bg-gray-700 rounded-full p-2 md:p-5 flex items-center justify-center mr-1 md:mr-2"

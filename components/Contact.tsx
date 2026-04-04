@@ -21,8 +21,8 @@ export default function Contact() {
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '(203) 243-2052',
-      link: 'tel:+12032432052',
+      value: '+91 8828210788',
+      link: 'tel:+918828210788',
       color: '#10B981',
     },
     {
