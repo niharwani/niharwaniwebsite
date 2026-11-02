@@ -12,23 +12,23 @@ export default function About() {
   const highlights = [
     {
       icon: Code2,
-      title: 'Full-Stack Development',
-      description: 'Building scalable web applications with modern technologies',
+      title: 'ETL Pipelines',
+      description: 'Building production ETLs with Python, Polars, and SQL for BFSI clients',
     },
     {
       icon: BarChart3,
       title: 'Data Analytics',
-      description: 'Transforming complex data into actionable insights',
+      description: 'Turning complex datasets into regulatory-grade, decision-ready outputs',
     },
     {
       icon: Lightbulb,
       title: 'Problem Solver',
-      description: 'Creating innovative solutions to real-world challenges',
+      description: 'Resolving data-quality defects and reconciliation gaps at scale',
     },
     {
       icon: Rocket,
-      title: 'Continuous Learner',
-      description: 'Always exploring new technologies and methodologies',
+      title: 'Full-Stack Background',
+      description: 'Software engineering roots in React, Next.js, Flask, and REST APIs',
     },
   ];
 
@@ -56,18 +56,20 @@ export default function About() {
             className="space-y-4"
           >
             <p className="text-gray-300 leading-relaxed">
-              I'm a <span className="text-white font-semibold">Software Engineer and Data Analyst</span> passionate about creating
-              seamless digital experiences and extracting meaningful insights from data. With a strong foundation in
-              full-stack development and data science, I specialize in building scalable applications that solve real-world problems.
+              I'm a <span className="text-white font-semibold">Data Engineer</span> with 3+ years of experience across
+              data engineering, software development, and analytics. Currently a <span className="text-white font-semibold">Data Management
+              Specialist at Acies LLP</span>, I build Python, Polars, and SQL-based ETL pipelines for financial services clients
+              including Aditya Birla Capital, InCred, Credila, Toyota Financial Services, and Al Ahli Bank of Kuwait.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              Currently pursuing my <span className="text-white font-semibold">Master's in Computer Science & Information Technology</span> at
-              Sacred Heart University, I bring hands-on experience in developing fintech platforms, machine learning solutions,
-              and e-commerce systems. My work combines technical expertise with a keen eye for user experience and data-driven decision making.
+              I hold an <span className="text-white font-semibold">M.S. in Computer Science (GPA 3.92/4.0)</span> from
+              Sacred Heart University. Prior to data engineering, I shipped transaction and inventory pipelines
+              for an e-commerce platform that supported a 25% increase in digital sales, and built data pipelines
+              for a telemedicine platform serving 10,000+ patients.
             </p>
             <p className="text-gray-300 leading-relaxed">
-              When I'm not coding or analyzing data, I'm exploring new technologies, contributing to open-source projects,
-              and continuously expanding my skill set through certifications and hands-on learning.
+              I enjoy solving complex data problems — reconciliation defects, schema mismatches, regulatory outputs —
+              and translating them into solutions that produce measurable business value.
             </p>
           </motion.div>
 

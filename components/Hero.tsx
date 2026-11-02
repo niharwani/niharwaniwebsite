@@ -139,8 +139,8 @@ export default function Hero() {
                 <Briefcase className="w-4 h-4 md:w-10 md:h-10" />
               </motion.div>
               <div className="pr-2 md:pr-8 pl-2 md:pl-6 py-2 md:py-5">
-                <div className="text-xs md:text-lg font-light">Software Engineer</div>
-                <div className="text-xs md:text-lg font-light">& Data Analyst</div>
+                <div className="text-xs md:text-lg font-light">Data Engineer</div>
+                <div className="text-xs md:text-lg font-light">Python · SQL · ETL</div>
               </div>
               <div className="w-4 md:w-32"></div>
             </div>

@@ -6,38 +6,62 @@ import { useRef } from 'react';
 
 const skillCategories = [
   {
-    title: 'Programming & Tools',
-    skills: [
-      'C', 'C++', 'Python', 'SQL', 'Java', 'HTML', 'CSS', 'JavaScript', 'TypeScript',
-      'Git', 'REST APIs', 'Firebase', 'Supabase', 'Next.js', 'React',
-      'Tailwind CSS', 'Shadcn/UI'
-    ],
+    title: 'Languages',
+    skills: ['Python', 'SQL', 'JavaScript', 'TypeScript', 'Java'],
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Data Science & Analysis',
+    title: 'Data Processing',
     skills: [
-      'Data Cleaning', 'EDA', 'Feature Engineering', 'Statistical Analysis',
-      'A/B Testing', 'Data Visualization', 'Time Series Analysis',
-      'Power BI', 'Tableau', 'BigQuery'
+      'Polars', 'Pandas', 'NumPy', 'PySpark', 'Data Validation & Reconciliation',
+      'Schema Design', 'Time Series Analysis',
     ],
     color: 'from-purple-500 to-pink-500',
   },
   {
-    title: 'Cloud & Infrastructure',
+    title: 'ETL & Orchestration',
     skills: [
-      'AWS', 'Azure', 'Google Cloud Platform', 'Linux/UNIX', 'Firebase Auth',
-      'PostgreSQL', 'Realtime DB', 'CI/CD', 'Docker'
+      'Apache Airflow', 'Apache NiFi', 'Apache Kafka', 'Talend Open Studio',
+      'Microsoft SSIS', 'Fivetran', 'SFTP Integrations',
+    ],
+    color: 'from-indigo-500 to-purple-500',
+  },
+  {
+    title: 'Databases & Warehouses',
+    skills: [
+      'PostgreSQL', 'MySQL', 'MongoDB', 'BigQuery', 'AWS Redshift',
+      'Firebase', 'Supabase', 'Redis',
     ],
     color: 'from-green-500 to-emerald-500',
   },
   {
-    title: 'Networking & Web',
+    title: 'Cloud & DevOps',
     skills: [
-      'TCP/IP', 'HTTP/HTTPS', 'Web Protocols', 'Network Monitoring', 'Google Ads',
-      'API Integration', 'Web Analytics', 'User Behavior Tracking'
+      'AWS (S3, Glue, Lambda)', 'GCP', 'Azure Data Factory',
+      'Docker', 'Git', 'CI/CD', 'Linux/UNIX',
     ],
     color: 'from-orange-500 to-red-500',
+  },
+  {
+    title: 'Analytics & BI',
+    skills: [
+      'Business Analytics', 'Power BI', 'Tableau', 'Excel Automation (OpenPyXL)',
+      'EDA', 'Statistical Analysis', 'Feature Engineering',
+    ],
+    color: 'from-amber-500 to-orange-500',
+  },
+  {
+    title: 'Software Engineering',
+    skills: [
+      'REST APIs', 'Flask', 'Streamlit', 'React', 'Next.js', 'Node.js',
+      'API Security Testing (HMAC, CSRF, IDOR)',
+    ],
+    color: 'from-teal-500 to-cyan-500',
+  },
+  {
+    title: 'ML / Other',
+    skills: ['XGBoost', 'NLP (BERT, BART, T5)'],
+    color: 'from-rose-500 to-pink-500',
   },
 ];
 
